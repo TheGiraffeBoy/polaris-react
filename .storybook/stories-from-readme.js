@@ -1,7 +1,7 @@
-import React from 'react';
-import * as Polaris from '@shopify/polaris';
+import * as React from 'react';
+import * as Polaris from '../src';
 import {checkA11y} from '@storybook/addon-a11y';
-import {storiesOf, addDecorator} from '@storybook/react';
+import {storiesOf} from '@storybook/react';
 import Playground from '../playground/Playground';
 
 export function generateStories(readme) {

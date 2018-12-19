@@ -1,7 +1,4 @@
 /* eslint-disable no-console */
-
-const fs = require('fs');
-const glob = require('glob');
 const chalk = require('chalk');
 const grayMatter = require('gray-matter');
 

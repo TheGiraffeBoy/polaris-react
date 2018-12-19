@@ -62,7 +62,7 @@ module.exports = (baseConfig, env, config) => {
           loader: 'ts-loader',
           options: {
             silent: true,
-            transpileOnly: true,
+            transpileOnly: env !== 'PRODUCTION',
             experimentalFileCaching: true,
           },
         },
@@ -145,6 +145,7 @@ module.exports = (baseConfig, env, config) => {
 
   baseConfig.resolve.extensions.push('.ts', '.tsx');
   baseConfig.resolve.alias = {
+    ...baseConfig.resolve.alias,
     '@shopify/polaris': path.resolve(__dirname, '..', 'src'),
   };
   return baseConfig;
